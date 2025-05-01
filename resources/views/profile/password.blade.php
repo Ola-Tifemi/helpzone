@@ -6,7 +6,7 @@
     
 
 <div class="row">
-    <div class="col-md-6 col-lg-6 col-xl-6 offset-3" style="margin-top: 200px; margin-bottom:150px">
+    <div class="col-md-6 col-lg-6 col-xl-6 offset-md-3" style="margin-top: 200px; margin-bottom:150px">
         <form method="POST" action="{{ route('profile.password.update.submit') }}">
             @csrf
             @method('PATCH') 

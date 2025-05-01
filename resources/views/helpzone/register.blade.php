@@ -8,7 +8,7 @@
 
 
 <div class="row ">
-    <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3" style="margin-top: 200px; margin-bottom:150px">
+    <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3" style="margin-top: 200px; margin-bottom:200px">
                     <h3>Register here.</h3>
         <span class="subheading">complete the form below to create an account.</span>
         <div class="my-5">

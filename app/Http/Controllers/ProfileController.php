@@ -54,10 +54,8 @@ class ProfileController extends Controller
         $user = Auth::user();
         $user->delete();
 
-        // Log out the user after deletion
         Auth::logout();
 
-        // Redirect to the home page with a success message
         return redirect('/')->with('success', 'Your account has been deleted.');
     }
 

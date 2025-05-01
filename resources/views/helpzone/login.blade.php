@@ -4,7 +4,7 @@
 
 @section('main_content')
 <div class="row ">
-    <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3" style="margin-top: 200px; margin-bottom:150px">
+    <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3" style="margin-top: 200px; margin-bottom:200px">
                     <h3>Log In.</h3>
         <div class="my-5">
             

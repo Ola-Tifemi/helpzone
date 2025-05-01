@@ -3,17 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Payments; // Assuming you have a Payment model
+use App\Models\Payments; 
 use App\Helpers\PaystackHelper;
 use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Facades\Log; // Add this import
+use Illuminate\Support\Facades\Log; 
 
 class PaymentsController extends Controller
 {
-    // Show the payment form
+    
     public function showPaymentForm()
     {
-        return view('payments.form'); // Ensure you have a Blade template at resources/views/payments/form.blade.php
+        return view('payments.form'); 
     }
 
     // Handle payment submission
@@ -39,7 +39,7 @@ class PaymentsController extends Controller
         $response = Http::withToken($paystackSecretKey)->post('https://api.paystack.co/transaction/initialize', [
             'email' => $request->email,
             'amount' => $request->amount * 100,
-            'reference' => $reference, // important!
+            'reference' => $reference, 
             'callback_url' => route('payment.callback'),
         ]);
 

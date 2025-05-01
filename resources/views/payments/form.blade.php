@@ -5,7 +5,7 @@
 @section('main_content')
 
 <div class="row " style="margin-top: 120px; margin-bottom:285px">
-    <div class="col-md-6 col-lg-6 mt-5 col-xl-6 offset-3">
+    <div class="col-md-6 col-lg-6 mt-5 col-xl-6 offset-md-3">
         <form action="{{ route('payment.process') }}" method="POST">
     @csrf
     <h4>All Payments are secured and smooth..</h4>

@@ -18,15 +18,13 @@ class DpController extends Controller
         //upload the file
         $dp->move('./profiles', $dp_name); 
         //update the database and the unique file name to upload to database
-        $id = auth()->user()->id; //get the id of the user uploading a picture
-        //find the user with the id
+        $id = auth()->user()->id; 
 
         //update the dp column in database
         $user = User::find($id);
         $user->dp = $dp_name;
-        $user->save();  //this is how to update a record in the database
-        return redirect()->route('dashboard.user')->with('success','Profile picture uploaded successfully'); //redirect back to success message
-        //redirect back to success message
+        $user->save(); 
+        return redirect()->route('dashboard.user')->with('success','Profile picture uploaded successfully'); 
 
     }
 }

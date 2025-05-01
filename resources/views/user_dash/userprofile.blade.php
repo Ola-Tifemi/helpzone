@@ -5,7 +5,7 @@
 @section('main_content')
 <div class="container-fluid">
     <div class="row mt-5">
-        <div class="col-md-6 col-lg-6 col-xl-6 offset-3 mb-4">
+        <div class="col-md-6 col-lg-6 col-xl-6 offset-md-3 mb-4">
             <h4 class="text-secondary text-uppercase " style="letter-spacing: 3px;">We'll Save Our Planet</h4>
             <h3 class="display-1 text-capitalize text-primary mb-4">Welcome {{ auth()->user()->name }}</h3>
             <p class="mb-5 fs-5">Your contributions are highly appreciated. Total Donations (₦{{ number_format($totalPayments, 2) }})</p>

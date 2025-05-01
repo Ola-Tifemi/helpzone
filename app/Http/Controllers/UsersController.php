@@ -31,21 +31,17 @@ class UsersController extends Controller
     public function fetchAllUsers()
     {
         // Fetch all users 
-        $users = User::whereNotNull('dp')  // Only users with a DP
-        ->withSum('payments', 'amount') // Calculate the total payments for each user
-        ->orderByDesc('payments_sum_amount')  // Sort by the highest total payment
-        ->take(4)  // Get only the top 4
+        $users = User::whereNotNull('dp')  
+        ->withSum('payments', 'amount') 
+        ->orderByDesc('payments_sum_amount')  //the highest total payment
+        ->take(4)  // Gets only the top 4
         ->get();
 
-        
-    
-            // Pass the data to a Blade template
     return view('helpzone.about', compact('users'));
     }
 
     public function fetchPayments(){
 
-        //fetch payments by each user 
          $payments = Auth::user()->payments()->with('user')->get();
          $totalPayments = Payments::sum('amount');
 
@@ -54,14 +50,14 @@ class UsersController extends Controller
 
     public function fetch_all_users()
     {
-        // Fetch all users from the database
         $currentUser = auth()->user();
         $users = User::where('id', '!=', $currentUser->id)->get();
 
-        // Return the view with the users data
+       
         return view('admin_dash', ['users' => $users]);    
-    //method that blocks and unblocks the user
+    
     }
+    //method that blocks and unblocks the user
 
     public function blockUser($id)
         {
